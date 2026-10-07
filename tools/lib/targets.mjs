@@ -38,11 +38,23 @@ export function css(r, opts = {}) {
     L.push("}");
   };
   L.push(banner(r, (t) => `/* ${t} */`), "");
+  // Fonts are served from the project itself (never from Google), so visiting a page tells no third party anything.
+  const fontUrl = opts.fontUrl ?? "fonts/";
+  for (const f of r.type.fonts ?? []) L.push(`@font-face { font-family: "${f.family}"; src: url("${fontUrl}${f.file.split("/").pop()}") format("woff2"); font-weight: ${f.weight}; font-style: ${f.style ?? "normal"}; font-display: swap; }`);
+  if ((r.type.fonts ?? []).length) L.push("");
   block(':root, [data-theme="light"]', first, true);
   for (const th of rest) {
     L.push("");
     block(`.${th}, [data-theme="${th}"]`, th, false);
     if (opts.systemMedia) { L.push("", `@media (prefers-color-scheme: ${th}) {`); block(`:root:not([data-theme="${first}"]):not(.${first})`, th, false); L.push("}"); }
+  }
+  // Palettes: only the variables a palette changes, for light (on any element carrying data-palette) and dark (needs the theme too, so it wins).
+  for (const [pname, pal] of Object.entries(r.palettes ?? {})) {
+    const changed = Object.keys(r.color).filter((n) => r.themes.some((th) => pal.color[n][th] !== r.color[n][th]));
+    if (changed.length === 0) continue;
+    L.push("", `/* Palette: ${pal.name}. ${pal.description} */`);
+    L.push(`[data-palette="${pname}"] {`, ...changed.map((n) => `  --${n}: ${pal.color[n][first]};`), "}");
+    for (const th of rest) L.push(`[data-palette="${pname}"].${th}, [data-palette="${pname}"][data-theme="${th}"] {`, ...changed.map((n) => `  --${n}: ${pal.color[n][th]};`), "}");
   }
   return L.join("\n") + "\n";
 }
@@ -101,8 +113,10 @@ export function swift(r) {
 
 /** Plain JSON for any tool: Houdini, After Effects scripts, Figma plugins, other languages. */
 export function json(r) {
-  return JSON.stringify({ name: r.name, version: r.version, app: r.app, themes: r.themes, color: r.color, ...r.families, type: r.type, provenance: r.provenance, overrides: r.overrides }, null, 1) + "\n";
+  return JSON.stringify({ name: r.name, version: r.version, app: r.app, themes: r.themes, defaultPalette: r.defaultPalette, color: r.color, palettes: r.palettes, ...r.families, type: r.type, provenance: r.provenance, overrides: r.overrides }, null, 1) + "\n";
 }
 
 export const TARGETS = { css, swift, json };
+/** Targets that copy binary files from core instead of generating text. */
+export const COPY_TARGETS = new Set(["fonts"]);
 export const DEFAULT_FILES = { css: "tokens.css", swift: "DesignTokens.swift", json: "resolved.json" };

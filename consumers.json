@@ -7,7 +7,14 @@
    "targets": [
     {
      "type": "css",
-     "out": "src/design/tokens.css"
+     "out": "src/design/tokens.css",
+     "options": {
+      "fontUrl": "/fonts/"
+     }
+    },
+    {
+     "type": "fonts",
+     "out": "public/fonts"
     },
     {
      "type": "swift",
@@ -26,10 +33,11 @@
    "targets": [
     {
      "type": "css",
-     "out": "site/public/tokens.css",
-     "options": {
-      "systemMedia": true
-     }
+     "out": "site/public/tokens.css"
+    },
+    {
+     "type": "fonts",
+     "out": "site/public/fonts"
     }
    ],
    "lock": "site/design.lock.json"

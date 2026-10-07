@@ -16,3 +16,8 @@ This folder is the shared design language for every project under ~/Devel/Claude
 - App layers add or override; they never change the type scale or the themes.
 - Keep prose free of em dashes, en dashes and double hyphens.
 - Do not commit secrets or machine specific paths into tokens. `consumers.json` uses `~/` paths.
+
+
+## References
+
+Read `REFERENCES.md` before changing the look. When the owner names a new site, brand or screenshot as inspiration, add it there in the same session.

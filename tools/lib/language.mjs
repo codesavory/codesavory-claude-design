@@ -49,6 +49,27 @@ export function load(root = ROOT, app = null) {
   return { name: core.name, version: version(root), app, tokens: merged, provenance, overrides, contrast };
 }
 
+/** Palettes: named sets of overrides on the semantic colours (brand, surfaces, ink). `tide` is the base and has none. */
+export function palettes(root = ROOT) {
+  const f = path.join(root, "core", "palettes.json");
+  return fs.existsSync(f) ? read(f) : { default: "tide", palettes: { tide: { name: "Tide" } } };
+}
+
+/** The language with one palette applied. Unknown token names in a palette are an error, so a typo cannot pass silently. */
+export function withPalette(lang, root, name) {
+  const def = palettes(root);
+  const pal = def.palettes[name];
+  if (!pal) throw new Error(`No palette "${name}"`);
+  const out = structuredClone(lang);
+  for (const [token, value] of Object.entries(pal.overrides ?? {})) {
+    const target = out.tokens.color.tokens.find((x) => x.name === token);
+    if (!target) throw new Error(`palette ${name}: unknown colour token "${token}"`);
+    target.value = value;
+  }
+  out.palette = name;
+  return out;
+}
+
 export function validate(lang) {
   const errors = [];
   const t = lang.tokens;

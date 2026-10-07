@@ -42,13 +42,13 @@ The palette is **Tide** (the brand blue, from powder to deep navy), **Saffron** 
 
 ### Type
 
-Three families, each with one job. **Bricolage Grotesque** (`display`) has character and sets headings and team names. **Instrument Sans** (`text`) sets everything you read. **JetBrains Mono** (`data`) sets numbers that tick or line up: the countdown, the kickoff time, the score, versions.
+One modern, minimal family does the work. **Geist** (`display` and `text`) sets headings, team names and everything you read, with tight tracking on large sizes. **Geist Mono** (`data`) sets numbers that tick or line up: the countdown, the kickoff time, the score, versions.
 
 - Headings use `display-*` and `title-*`; body copy uses `body-l`, `body`, `body-s`; uppercase tags use `label` (always with its letter spacing).
 - Numbers that change or align use `data-l`, `data-m` or `data-s` with tabular figures.
 - Keep running text near 65 characters wide. Headings use balanced wrapping.
 - One `display-xl` per page at most. On phones, step the scale down one level (`display-l` becomes `display-m`).
-- Fonts load from Google Fonts on the web. The Apple apps bundle the same families (all are open licence); until bundled, fall back to the system font and keep the same weights.
+
 
 ### Space and layout
 
@@ -94,6 +94,10 @@ Motion explains change and builds anticipation. One orchestrated moment per scre
 - Focus is a solid 3px `focus` outline with a 2px offset. It is visible on every surface in both themes. Never remove it.
 - Touch targets are at least 44px. Text never goes below 12px; body is 15px.
 - Both themes are designed, not inverted. Dark uses `tide-300` for brand fills and `saffron-300` for accent text.
+
+## Palettes
+
+A palette swaps the brand colours and surface tints; gold, type, shape and motion stay the same. **Tide** (blue and gold) is the default. **Fern** is green and black with the same gold. **Ink** is black and white with the gold accent, the quietest. Set `data-palette` on the root element on the web (`<html data-palette="fern">`). Every palette passes the same contrast pairs in both themes (`dl check`). Add one in `core/palettes.json` by listing the semantic tokens it overrides.
 
 ## Using it
 

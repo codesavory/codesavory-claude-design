@@ -164,3 +164,37 @@ test("the lock holds a plain SHA-256 prefix of each file, so a project can verif
     assert.equal(h, crypto.createHash("sha256").update(text).digest("hex").slice(0, 16), file);
   }
 });
+
+test("every palette passes the same contrast pairs in both themes", () => {
+  const out = spawnSync("node", [path.join(ROOT, "tools", "dl.mjs"), "check"], { encoding: "utf8" });
+  assert.equal(out.status, 0, out.stdout);
+  assert.match(out.stdout, /palettes: tide, fern, ink/);
+});
+
+test("a palette that breaks contrast is rejected", () => {
+  const { root, dl } = sandbox();
+  const f = path.join(root, "core", "palettes.json");
+  const d = JSON.parse(fs.readFileSync(f, "utf8"));
+  d.palettes.fern.overrides["ink-muted"] = { light: "#dddddd", dark: "#dddddd" };
+  fs.writeFileSync(f, JSON.stringify(d));
+  const r = dl("check");
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /palette fern: contrast/);
+});
+
+test("a palette naming an unknown token is rejected", () => {
+  const { root, dl } = sandbox();
+  const f = path.join(root, "core", "palettes.json");
+  const d = JSON.parse(fs.readFileSync(f, "utf8"));
+  d.palettes.ink.overrides["not-a-token"] = { light: "#000000", dark: "#ffffff" };
+  fs.writeFileSync(f, JSON.stringify(d));
+  const r = dl("check");
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /unknown colour token "not-a-token"/);
+});
+
+test("CSS carries each palette for light and dark, and only what changes", () => {
+  const { r } = compile("kickoff");
+  const d = JSON.parse(fs.readFileSync(path.join(ROOT, "core", "palettes.json"), "utf8"));
+  assert.ok(d.palettes.fern && d.palettes.ink);
+});

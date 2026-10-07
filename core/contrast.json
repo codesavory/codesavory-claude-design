@@ -157,34 +157,39 @@
    "min": 3
   },
   {
-   "fg": "pastel-sky-ink",
-   "bg": "pastel-sky",
-   "min": 4.5
-  },
-  {
-   "fg": "pastel-butter-ink",
-   "bg": "pastel-butter",
-   "min": 4.5
-  },
-  {
-   "fg": "pastel-mint-ink",
-   "bg": "pastel-mint",
-   "min": 4.5
-  },
-  {
-   "fg": "pastel-blush-ink",
-   "bg": "pastel-blush",
-   "min": 4.5
-  },
-  {
-   "fg": "pastel-lilac-ink",
-   "bg": "pastel-lilac",
-   "min": 4.5
-  },
-  {
    "fg": "focus-inverse",
    "bg": "surface-inverse",
    "min": 3
+  },
+  {
+   "fg": "tint-stone-ink",
+   "bg": "tint-stone",
+   "min": 4.5
+  },
+  {
+   "fg": "tint-cloud-ink",
+   "bg": "tint-cloud",
+   "min": 4.5
+  },
+  {
+   "fg": "tint-ash-ink",
+   "bg": "tint-ash",
+   "min": 4.5
+  },
+  {
+   "fg": "tint-ember-ink",
+   "bg": "tint-ember",
+   "min": 4.5
+  },
+  {
+   "fg": "tint-signal-ink",
+   "bg": "tint-signal",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-muted",
+   "bg": "tint-stone",
+   "min": 4.5
   }
  ]
 }

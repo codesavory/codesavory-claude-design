@@ -6,13 +6,14 @@ One visual language for everything built under Codesavory: apps, websites, motio
 - `core/` is the **universal** language: palette, type, spacing, shape, shadow, motion, components and marks. Change it when a decision should apply everywhere.
 - `apps/<name>/` is an **app layer** on top of the core: tokens and rules that only that product needs (Kickoff has the match ring colours and crest sizes). An app layer can add tokens, and in rare cases override a universal one. It never edits the core.
 
-The look today: **calm precision**. Soft pastel surfaces, deep navy and a gold accent, exact numbers, one bold moment per screen, light and dark themes. Read `DESIGN.md` for the full brand book and `apps/<name>/DESIGN.md` for a product.
+The look today: **monochrome with a hot accent**. Greys, near-black and white, one ember (orange) or signal (red) accent that carries across light and dark, dot-matrix numerals, mono captions, hairline grids. Inspiration the owner has named lives in `REFERENCES.md`. Read `DESIGN.md` for the full brand book and `apps/<name>/DESIGN.md` for a product.
 
 ## Layout
 
 ```
 design-language/
   README.md        this file
+  REFERENCES.md    sites and brands the owner pointed at, and what to take from each
   DESIGN.md        the universal brand book (rules that name tokens)
   CLAUDE.md        instructions for any Claude session that works here or in a project that uses this
   CHANGELOG.md     what changed in each version

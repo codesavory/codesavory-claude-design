@@ -1,0 +1,62 @@
+{
+ "default": "ember",
+ "note": "A palette swaps only the accent. Greys, type, shape and motion stay the same. Switch with data-palette on the root element.",
+ "palettes": {
+  "ember": {
+   "name": "Ember",
+   "description": "Orange accent. The default."
+  },
+  "signal": {
+   "name": "Signal",
+   "description": "Red accent.",
+   "overrides": {
+    "accent": {
+     "light": "{signal-400}",
+     "dark": "{signal-400}"
+    },
+    "accent-ink": {
+     "light": "{gray-950}",
+     "dark": "{gray-950}"
+    },
+    "accent-text": {
+     "light": "{signal-700}",
+     "dark": "{signal-300}"
+    },
+    "focus-inverse": {
+     "light": "{signal-400}",
+     "dark": "{signal-400}"
+    },
+    "focus": {
+     "light": "{gray-950}",
+     "dark": "{signal-400}"
+    }
+   }
+  },
+  "graphite": {
+   "name": "Graphite",
+   "description": "No colour accent: black and grey only.",
+   "overrides": {
+    "accent": {
+     "light": "{gray-300}",
+     "dark": "{gray-200}"
+    },
+    "accent-ink": {
+     "light": "{gray-950}",
+     "dark": "{gray-950}"
+    },
+    "accent-text": {
+     "light": "{gray-700}",
+     "dark": "{gray-200}"
+    },
+    "focus-inverse": {
+     "light": "{gray-300}",
+     "dark": "{gray-300}"
+    },
+    "focus": {
+     "light": "{gray-950}",
+     "dark": "{gray-200}"
+    }
+   }
+  }
+ }
+}

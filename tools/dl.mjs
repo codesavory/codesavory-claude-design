@@ -4,9 +4,9 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import crypto from "node:crypto";
-import { ROOT, load, validate, resolve, listApps, read, version } from "./lib/language.mjs";
+import { ROOT, load, validate, resolve, listApps, read, version, palettes, withPalette } from "./lib/language.mjs";
 import { checkContrast } from "./lib/contrast.mjs";
-import { TARGETS, DEFAULT_FILES } from "./lib/targets.mjs";
+import { TARGETS, DEFAULT_FILES, COPY_TARGETS } from "./lib/targets.mjs";
 
 const args = process.argv.slice(2);
 const cmd = args[0] ?? "help";
@@ -15,6 +15,7 @@ const positional = args.slice(1).filter((a, i, arr) => !a.startsWith("--") && !(
 const home = (p) => (p.startsWith("~") ? path.join(os.homedir(), p.slice(1)) : p);
 /** First 16 hex characters of the SHA-256 of the file text: what a project can recompute with no help from this tool. */
 const sha = (s) => crypto.createHash("sha256").update(s).digest("hex").slice(0, 16);
+const same = (disk, text) => (typeof text === "string" ? disk.toString("utf8") === text : Buffer.compare(disk, text) === 0);
 const log = (...a) => console.log(...a);
 
 const consumersFile = path.join(ROOT, "consumers.json");
@@ -29,6 +30,20 @@ function compile(app) {
   const resolved = resolve(lang);
   const fails = checkContrast(resolved, lang.contrast);
   if (fails.length) throw new Error(`${app ?? "core"}: contrast ${fails.map((f) => `${f.theme} ${f.fg} on ${f.bg} ${f.ratio} (need ${f.min})`).join("; ")}`);
+  // Every palette must be valid and meet the same contrast pairs in both themes.
+  const def = palettes(ROOT);
+  resolved.defaultPalette = def.default;
+  resolved.palettes = {};
+  for (const [name, pal] of Object.entries(def.palettes)) {
+    if (name === def.default) continue;
+    const pl = withPalette(lang, ROOT, name);
+    const errs = validate(pl);
+    if (errs.length) throw new Error(`${app ?? "core"} palette ${name}: ${errs.join("; ")}`);
+    const pr = resolve(pl);
+    const pf = checkContrast(pr, lang.contrast);
+    if (pf.length) throw new Error(`${app ?? "core"} palette ${name}: contrast ${pf.map((f) => `${f.theme} ${f.fg} on ${f.bg} ${f.ratio} (need ${f.min})`).join("; ")}`);
+    resolved.palettes[name] = { name: pal.name, description: pal.description ?? "", color: pr.color };
+  }
   return resolved;
 }
 
@@ -36,6 +51,11 @@ function generate(consumer) {
   const resolved = compile(consumer.app);
   const out = [];
   for (const t of consumer.targets) {
+    if (COPY_TARGETS.has(t.type)) {   // fonts: copy every file in core/fonts into the project
+      const dir = path.join(ROOT, "core", t.type);
+      for (const f of fs.readdirSync(dir).sort()) out.push({ ...t, out: path.posix.join(t.out, f), text: fs.readFileSync(path.join(dir, f)) });
+      continue;
+    }
     if (!TARGETS[t.type]) throw new Error(`${consumer.name}: unknown target type "${t.type}"`);
     out.push({ ...t, text: TARGETS[t.type](resolved, t.options ?? {}) });
   }
@@ -52,8 +72,8 @@ function consumerStatus(consumer) {
   const rows = files.map((f) => {
     const file = path.join(base, f.out);
     if (!fs.existsSync(file)) return { out: f.out, state: "missing" };
-    const disk = fs.readFileSync(file, "utf8");
-    if (disk === f.text) return { out: f.out, state: "in sync" };
+    const disk = fs.readFileSync(file);
+    if (same(disk, f.text)) return { out: f.out, state: "in sync" };
     if (lock && lock.files?.[f.out] && lock.files[f.out] !== sha(disk)) return { out: f.out, state: "edited by hand" };
     return { out: f.out, state: "behind (language changed)" };
   });
@@ -69,10 +89,10 @@ function sync(consumer, dry = false) {
   let changed = 0;
   for (const f of files) {
     const file = path.join(base, f.out);
-    const same = fs.existsSync(file) && fs.readFileSync(file, "utf8") === f.text;
-    if (!same) { changed++; if (!dry) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, f.text); } }
+    const unchanged = fs.existsSync(file) && same(fs.readFileSync(file), f.text);
+    if (!unchanged) { changed++; if (!dry) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, f.text); } }
     lockFiles[f.out] = sha(f.text);
-    log(`  ${same ? "same   " : dry ? "would  " : "wrote  "} ${consumer.name}: ${f.out}`);
+    log(`  ${unchanged ? "same   " : dry ? "would  " : "wrote  "} ${consumer.name}: ${f.out}`);
   }
   if (!dry) {
     fs.mkdirSync(path.dirname(lockPath(consumer)), { recursive: true });
@@ -104,7 +124,7 @@ const commands = {
   check() {
     let bad = 0;
     for (const app of [null, ...listApps()]) {
-      try { const r = compile(app); log(`ok    ${app ?? "core"} (${Object.keys(r.color).length} colours, ${r.overrides.length} overrides)`); }
+      try { const r = compile(app); log(`ok    ${app ?? "core"} (${Object.keys(r.color).length} colours, ${r.overrides.length} overrides, palettes: ${[r.defaultPalette, ...Object.keys(r.palettes)].join(", ")})`); }
       catch (e) { bad++; log(`FAIL  ${e.message}`); }
     }
     process.exit(bad ? 1 : 0);
