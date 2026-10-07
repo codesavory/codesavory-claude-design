@@ -1,0 +1,9 @@
+<!-- @dsCard group="Navigation" height=120 subtitle="Two or three views of one thing." -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap">
+<div class="cs-stage">
+  <div class="cs-seg" role="tablist" aria-label="Matches or results">
+    <button role="tab" aria-selected="true">Upcoming</button>
+    <button role="tab" aria-selected="false">Results</button>
+  </div>
+</div>
+<script>document.querySelectorAll('.cs-seg button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.cs-seg button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true')}))</script>

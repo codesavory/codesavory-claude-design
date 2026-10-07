@@ -1,0 +1,37 @@
+<!-- @dsCard height=288 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap">
+<style>
+  html,body{margin:0;background:var(--surface)}
+  svg{display:block;width:960px;height:288px}
+  .slab{fill:var(--tide-800);rx:var(--radius-lg)}
+  .gold{fill:var(--saffron-400);rx:var(--radius-lg)}
+  .tint{fill:var(--tide-100);rx:var(--radius-lg)}
+  .mid{fill:var(--tide-500);rx:var(--radius-lg)}
+  .ring{fill:none;stroke:var(--saffron-400);stroke-width:28;stroke-linecap:round}
+  .seed{fill:var(--salt-50)}
+  .cut{fill:var(--surface)}
+  .disc{fill:var(--tide-100)}
+  .name{font:700 72px/72px var(--font-display);letter-spacing:-0.03em;fill:var(--ink)}
+  .tag{font:400 14px/20px var(--font-text);fill:var(--ink-muted)}
+</style>
+<svg viewBox="0 0 960 288" role="img" aria-label="Codesavory">
+  <!--
+    blocks: tide-800 slab 264x224 (bleeds off the top), saffron-400 block 200x152 (bleeds off the right), tide-100 block 136x96 and tide-500 block 112x96 (bleed off the bottom); sides are multiples of space-1, corners are radius-lg.
+    arrangement: a staggered cluster right of x=480, unequal sizes, all four blocks touching an edge or each other's rhythm, nothing left of x=480.
+    pattern: the brand's own motif. The open ring with its seed (the mark), built from one arc of the radius scale, clipped to the slab; a quarter disc of ground is cut out of the saffron block and a disc of tide-100 sits in the mid block. Chosen because the brand is literally a ring and a seed.
+    steps and radii: space-4 gap (16), space-5 (24), radius-lg (24); ring stroke 28 = space-5 + space-1.
+  -->
+  <defs>
+    <clipPath id="slabclip"><rect x="496" y="-24" width="264" height="224" rx="24"/></clipPath>
+    <clipPath id="goldclip"><rect x="776" y="56" width="200" height="152" rx="24"/></clipPath>
+  </defs>
+  <rect class="slab" x="496" y="-24" width="264" height="224" rx="24"/>
+  <g clip-path="url(#slabclip)"><path class="ring" d="M680.4 132.7 A64 64 0 1 1 680.4 59.3"/><circle class="seed" cx="692" cy="96" r="14"/></g>
+  <rect class="gold" x="776" y="56" width="200" height="152" rx="24"/>
+  <g clip-path="url(#goldclip)"><circle class="cut" cx="776" cy="208" r="64"/></g>
+  <rect class="tint" x="496" y="216" width="136" height="96" rx="24"/>
+  <rect class="mid" x="648" y="216" width="112" height="96" rx="24"/>
+  <circle class="disc" cx="704" cy="264" r="24"/>
+  <text class="name" x="48" y="196">Codesavory</text>
+  <text class="tag" x="48" y="232">Calm precision, for tools you look forward to.</text>
+</svg>

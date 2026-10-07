@@ -1,0 +1,38 @@
+{
+ "consumers": [
+  {
+   "name": "kickoff",
+   "app": "kickoff",
+   "path": "~/Devel/ClaudeAgents/cloud-projects/Football-Tracking-Streaming",
+   "targets": [
+    {
+     "type": "css",
+     "out": "src/design/tokens.css"
+    },
+    {
+     "type": "swift",
+     "out": "ios-native/FootballHub/Design/DesignTokens.swift"
+    },
+    {
+     "type": "json",
+     "out": "design/resolved.json"
+    }
+   ]
+  },
+  {
+   "name": "kickoff-site",
+   "app": "kickoff",
+   "path": "/Users/suriya_daxna/Devel/ClaudeAgents/cloud-projects/Football-Tracking-Streaming",
+   "targets": [
+    {
+     "type": "css",
+     "out": "site/public/tokens.css",
+     "options": {
+      "systemMedia": true
+     }
+    }
+   ],
+   "lock": "site/design.lock.json"
+  }
+ ]
+}

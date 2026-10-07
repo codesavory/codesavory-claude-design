@@ -1,0 +1,9 @@
+<!-- @dsCard group="Actions" height=120 subtitle="Filters. Pressed fills with the brand blue." -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap">
+<div class="cs-stage">
+  <button class="cs-chip" aria-pressed="true">All competitions</button>
+  <button class="cs-chip" aria-pressed="false">Premier League</button>
+  <button class="cs-chip" aria-pressed="false">La Liga</button>
+  <button class="cs-chip" aria-pressed="false">Champions League</button>
+</div>
+<script>document.querySelectorAll('.cs-chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.cs-chip').forEach(x=>x.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true')}))</script>

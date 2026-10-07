@@ -1,0 +1,190 @@
+{
+ "note": "Pairs every theme must meet (WCAG 2). An app may add its own under tokens.json 'contrast'.",
+ "pairs": [
+  {
+   "fg": "ink",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "ink",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "ink",
+   "bg": "surface-sunk",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-muted",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-muted",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-muted",
+   "bg": "surface-sunk",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-subtle",
+   "bg": "surface",
+   "min": 3
+  },
+  {
+   "fg": "brand-text",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "brand-text",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "brand-text",
+   "bg": "brand-subtle",
+   "min": 4.5
+  },
+  {
+   "fg": "on-brand",
+   "bg": "brand",
+   "min": 4.5
+  },
+  {
+   "fg": "accent-ink",
+   "bg": "accent",
+   "min": 4.5
+  },
+  {
+   "fg": "accent-text",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "accent-text",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "live-text",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "live-text",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "live-text",
+   "bg": "live-subtle",
+   "min": 4.5
+  },
+  {
+   "fg": "on-live",
+   "bg": "live",
+   "min": 4.5
+  },
+  {
+   "fg": "success-text",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "success-text",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "success-text",
+   "bg": "success-subtle",
+   "min": 4.5
+  },
+  {
+   "fg": "info-text",
+   "bg": "surface",
+   "min": 4.5
+  },
+  {
+   "fg": "info-text",
+   "bg": "surface-raised",
+   "min": 4.5
+  },
+  {
+   "fg": "info-text",
+   "bg": "info-subtle",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-inverse",
+   "bg": "surface-inverse",
+   "min": 4.5
+  },
+  {
+   "fg": "line-strong",
+   "bg": "surface",
+   "min": 3
+  },
+  {
+   "fg": "line-strong",
+   "bg": "surface-raised",
+   "min": 3
+  },
+  {
+   "fg": "focus",
+   "bg": "surface",
+   "min": 3
+  },
+  {
+   "fg": "focus",
+   "bg": "surface-raised",
+   "min": 3
+  },
+  {
+   "fg": "brand",
+   "bg": "surface",
+   "min": 3
+  },
+  {
+   "fg": "accent",
+   "bg": "surface-inverse",
+   "min": 3
+  },
+  {
+   "fg": "pastel-sky-ink",
+   "bg": "pastel-sky",
+   "min": 4.5
+  },
+  {
+   "fg": "pastel-butter-ink",
+   "bg": "pastel-butter",
+   "min": 4.5
+  },
+  {
+   "fg": "pastel-mint-ink",
+   "bg": "pastel-mint",
+   "min": 4.5
+  },
+  {
+   "fg": "pastel-blush-ink",
+   "bg": "pastel-blush",
+   "min": 4.5
+  },
+  {
+   "fg": "pastel-lilac-ink",
+   "bg": "pastel-lilac",
+   "min": 4.5
+  },
+  {
+   "fg": "focus-inverse",
+   "bg": "surface-inverse",
+   "min": 3
+  }
+ ]
+}
