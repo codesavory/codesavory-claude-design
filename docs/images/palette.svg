@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 372" font-family="ui-monospace,Menlo,monospace" font-size="11">
+<rect width="100%" height="100%" fill="#f4f4f4"/>
+<text x="24" y="30" font-size="14" font-weight="600" fill="#08090a">Gray</text>
+<rect x="24.0" y="40" width="72.3" height="64" rx="8" fill="#ffffff"/><text x="30.0" y="94" fill="#08090a">0</text><text x="24.0" y="122" fill="#575961">#ffffff</text>
+<rect x="100.3" y="40" width="72.3" height="64" rx="8" fill="#fafafa"/><text x="106.3" y="94" fill="#08090a">25</text><text x="100.3" y="122" fill="#575961">#fafafa</text>
+<rect x="176.6" y="40" width="72.3" height="64" rx="8" fill="#f4f4f4"/><text x="182.6" y="94" fill="#08090a">50</text><text x="176.6" y="122" fill="#575961">#f4f4f4</text>
+<rect x="252.9" y="40" width="72.3" height="64" rx="8" fill="#ebebeb"/><text x="258.9" y="94" fill="#08090a">100</text><text x="252.9" y="122" fill="#575961">#ebebeb</text>
+<rect x="329.2" y="40" width="72.3" height="64" rx="8" fill="#dddddd"/><text x="335.2" y="94" fill="#08090a">200</text><text x="329.2" y="122" fill="#575961">#dddddd</text>
+<rect x="405.5" y="40" width="72.3" height="64" rx="8" fill="#c2c2c2"/><text x="411.5" y="94" fill="#08090a">300</text><text x="405.5" y="122" fill="#575961">#c2c2c2</text>
+<rect x="481.8" y="40" width="72.3" height="64" rx="8" fill="#9b9b9b"/><text x="487.8" y="94" fill="#08090a">400</text><text x="481.8" y="122" fill="#575961">#9b9b9b</text>
+<rect x="558.2" y="40" width="72.3" height="64" rx="8" fill="#74767e"/><text x="564.2" y="94" fill="#ffffff">500</text><text x="558.2" y="122" fill="#575961">#74767e</text>
+<rect x="634.5" y="40" width="72.3" height="64" rx="8" fill="#575961"/><text x="640.5" y="94" fill="#ffffff">600</text><text x="634.5" y="122" fill="#575961">#575961</text>
+<rect x="710.8" y="40" width="72.3" height="64" rx="8" fill="#3d3e44"/><text x="716.8" y="94" fill="#ffffff">700</text><text x="710.8" y="122" fill="#575961">#3d3e44</text>
+<rect x="787.1" y="40" width="72.3" height="64" rx="8" fill="#1d1e22"/><text x="793.1" y="94" fill="#ffffff">800</text><text x="787.1" y="122" fill="#575961">#1d1e22</text>
+<rect x="863.4" y="40" width="72.3" height="64" rx="8" fill="#111214"/><text x="869.4" y="94" fill="#ffffff">900</text><text x="863.4" y="122" fill="#575961">#111214</text>
+<rect x="939.7" y="40" width="72.3" height="64" rx="8" fill="#08090a"/><text x="945.7" y="94" fill="#ffffff">950</text><text x="939.7" y="122" fill="#575961">#08090a</text>
+<text x="24" y="134" font-size="14" font-weight="600" fill="#08090a">Ember</text>
+<rect x="24.0" y="144" width="86.2" height="64" rx="8" fill="#fff0eb"/><text x="30.0" y="198" fill="#08090a">50</text><text x="24.0" y="226" fill="#575961">#fff0eb</text>
+<rect x="114.2" y="144" width="86.2" height="64" rx="8" fill="#ffded1"/><text x="120.2" y="198" fill="#08090a">100</text><text x="114.2" y="226" fill="#575961">#ffded1</text>
+<rect x="204.4" y="144" width="86.2" height="64" rx="8" fill="#ffbda3"/><text x="210.4" y="198" fill="#08090a">200</text><text x="204.4" y="226" fill="#575961">#ffbda3</text>
+<rect x="294.5" y="144" width="86.2" height="64" rx="8" fill="#ff956b"/><text x="300.5" y="198" fill="#08090a">300</text><text x="294.5" y="226" fill="#575961">#ff956b</text>
+<rect x="384.7" y="144" width="86.2" height="64" rx="8" fill="#ff743d"/><text x="390.7" y="198" fill="#08090a">400</text><text x="384.7" y="226" fill="#575961">#ff743d</text>
+<rect x="474.9" y="144" width="86.2" height="64" rx="8" fill="#ff5e1f"/><text x="480.9" y="198" fill="#ffffff">500</text><text x="474.9" y="226" fill="#575961">#ff5e1f</text>
+<rect x="565.1" y="144" width="86.2" height="64" rx="8" fill="#dd490e"/><text x="571.1" y="198" fill="#ffffff">600</text><text x="565.1" y="226" fill="#575961">#dd490e</text>
+<rect x="655.3" y="144" width="86.2" height="64" rx="8" fill="#b33a09"/><text x="661.3" y="198" fill="#ffffff">700</text><text x="655.3" y="226" fill="#575961">#b33a09</text>
+<rect x="745.5" y="144" width="86.2" height="64" rx="8" fill="#882c07"/><text x="751.5" y="198" fill="#ffffff">800</text><text x="745.5" y="226" fill="#575961">#882c07</text>
+<rect x="835.6" y="144" width="86.2" height="64" rx="8" fill="#5b1e06"/><text x="841.6" y="198" fill="#ffffff">900</text><text x="835.6" y="226" fill="#575961">#5b1e06</text>
+<rect x="925.8" y="144" width="86.2" height="64" rx="8" fill="#341204"/><text x="931.8" y="198" fill="#ffffff">950</text><text x="925.8" y="226" fill="#575961">#341204</text>
+<text x="24" y="238" font-size="14" font-weight="600" fill="#08090a">Signal</text>
+<rect x="24.0" y="248" width="86.2" height="64" rx="8" fill="#ffeceb"/><text x="30.0" y="302" fill="#08090a">50</text><text x="24.0" y="330" fill="#575961">#ffeceb</text>
+<rect x="114.2" y="248" width="86.2" height="64" rx="8" fill="#ffd9d6"/><text x="120.2" y="302" fill="#08090a">100</text><text x="114.2" y="330" fill="#575961">#ffd9d6</text>
+<rect x="204.4" y="248" width="86.2" height="64" rx="8" fill="#feb4ae"/><text x="210.4" y="302" fill="#08090a">200</text><text x="204.4" y="330" fill="#575961">#feb4ae</text>
+<rect x="294.5" y="248" width="86.2" height="64" rx="8" fill="#fc867e"/><text x="300.5" y="302" fill="#08090a">300</text><text x="294.5" y="330" fill="#575961">#fc867e</text>
+<rect x="384.7" y="248" width="86.2" height="64" rx="8" fill="#f6574c"/><text x="390.7" y="302" fill="#ffffff">400</text><text x="384.7" y="330" fill="#575961">#f6574c</text>
+<rect x="474.9" y="248" width="86.2" height="64" rx="8" fill="#ea362a"/><text x="480.9" y="302" fill="#ffffff">500</text><text x="474.9" y="330" fill="#575961">#ea362a</text>
+<rect x="565.1" y="248" width="86.2" height="64" rx="8" fill="#c8291e"/><text x="571.1" y="302" fill="#ffffff">600</text><text x="565.1" y="330" fill="#575961">#c8291e</text>
+<rect x="655.3" y="248" width="86.2" height="64" rx="8" fill="#a21f16"/><text x="661.3" y="302" fill="#ffffff">700</text><text x="655.3" y="330" fill="#575961">#a21f16</text>
+<rect x="745.5" y="248" width="86.2" height="64" rx="8" fill="#791811"/><text x="751.5" y="302" fill="#ffffff">800</text><text x="745.5" y="330" fill="#575961">#791811</text>
+<rect x="835.6" y="248" width="86.2" height="64" rx="8" fill="#50100c"/><text x="841.6" y="302" fill="#ffffff">900</text><text x="835.6" y="330" fill="#575961">#50100c</text>
+<rect x="925.8" y="248" width="86.2" height="64" rx="8" fill="#2c0a07"/><text x="931.8" y="302" fill="#ffffff">950</text><text x="925.8" y="330" fill="#575961">#2c0a07</text>
+</svg>

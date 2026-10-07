@@ -6,7 +6,37 @@ One visual language for everything built under Codesavory: apps, websites, motio
 - `core/` is the **universal** language: palette, type, spacing, shape, shadow, motion, components and marks. Change it when a decision should apply everywhere.
 - `apps/<name>/` is an **app layer** on top of the core: tokens and rules that only that product needs (Kickoff has the match ring colours and crest sizes). An app layer can add tokens, and in rare cases override a universal one. It never edits the core.
 
-The look today: **monochrome with a hot accent**. Greys, near-black and white, one ember (orange) or signal (red) accent that carries across light and dark, dot-matrix numerals, mono captions, hairline grids. Inspiration the owner has named lives in `REFERENCES.md`. Read `DESIGN.md` for the full brand book and `apps/<name>/DESIGN.md` for a product.
+The look: **monochrome with one hot accent**. Greys, near-black and white do the work; one ember (orange) or signal (red) accent carries every moment that matters, the same in light and dark. Dot-matrix numerals, mono captions, hairline grids. The full philosophy is in [`DESIGN.md`](DESIGN.md), and the sites and brands that shaped it are in [`REFERENCES.md`](REFERENCES.md).
+
+![Kickoff, dark](docs/images/kickoff-dark.png)
+![Kickoff, light](docs/images/kickoff-light.png)
+
+## Philosophy in six lines
+
+1. Reduce until it is one thing.
+2. One spark per screen: the accent, never two.
+3. Instrument, not decoration: dot-matrix digits, mono labels, hairlines.
+4. Dark is a place, light is a page. Both designed, neither inverted.
+5. Colour is a setting, not a decision: components name roles (`surface`, `ink`, `accent`), never hex.
+6. Private and plain: self-hosted fonts, no tracking, short sentences.
+
+## Colours
+
+![Palette](docs/images/palette.svg)
+
+Pick the accent with `data-palette` on the root element. Swap it anywhere, nothing else changes.
+
+| Ember (default) | Signal | Graphite |
+|---|---|---|
+| ![ember](docs/images/kickoff-dark.png) | ![signal](docs/images/kickoff-signal.png) | ![graphite](docs/images/kickoff-graphite.png) |
+
+| Mark on light | Mark on dark | App icon |
+|---|---|---|
+| <img src="core/marks/mark-on-light.svg" width="96"> | <img src="core/marks/mark-on-dark.svg" width="96"> | <img src="core/marks/kickoff-icon-proposal.svg" width="96"> |
+
+## Swapping the look
+
+Change a ramp, a palette override or a role in `core/` (or an app overlay in `apps/<name>/`), then run `node tools/dl.mjs check` and `node tools/dl.mjs sync`. Every consumer (web, iPhone, Mac, sites) regenerates. Components never name a colour, so nothing else needs editing.
 
 ## Layout
 
