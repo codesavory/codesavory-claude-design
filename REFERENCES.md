@@ -23,7 +23,7 @@ Everything the owner has pointed at as a design reference, in the order given. A
 | Arc'teryx | https://arcteryx.com | Technical minimalism, monochrome with one accent. |
 | Nothing | https://nothing.tech | Dot-matrix type, transparent hardware feel, red accent. |
 | teenage engineering OP-1 | https://teenage.engineering/products/op-1 | Mono labels, hairline grids, orange accent, instrument-panel layout. |
-| Raycast | https://www.raycast.com/ | Dark theme target: near-black, floating glass nav pill with hairline border, huge centred white headline, diagonal grainy red light-streak art, glowing light pill button, small mono captions. The hero screenshot supplied by the owner is the benchmark ("very close to this"). |
+| Raycast | https://www.raycast.com/ | Dark theme target: near-black, floating glass nav pill with hairline border, huge centred white headline, diagonal grainy red light-streak art, glowing light pill button, small mono captions. The hero screenshot supplied by the owner was the first benchmark. Later feedback (7 Oct 2026): the marketing site looked "too copied from Raycast". Take the near-black surfaces and the quiet hairlines, not the floating glass nav pill, the diagonal light streaks or the glow button. Kickoff's own signature is the dotted pitch and the dot ring. |
 | Airbnb, Stripe | https://www.airbnb.com, https://stripe.com | Depth of a real design system: tokens, components, expression. |
 | Houdini colour ramps | (screenshots, owner's machine) | Owner likes ramps with a bold flavour. Superseded by the monochrome plus ember direction. |
 
