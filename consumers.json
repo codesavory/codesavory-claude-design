@@ -41,6 +41,25 @@
     }
    ],
    "lock": "site/design.lock.json"
+  },
+  {
+   "name": "codesavory-hub",
+   "app": null,
+   "path": "~/Devel/ClaudeAgents/codesavory.dev-website",
+   "targets": [
+    {
+     "type": "css",
+     "out": "public/tokens.css",
+     "options": {
+      "fontUrl": "/fonts/"
+     }
+    },
+    {
+     "type": "fonts",
+     "out": "public/fonts"
+    }
+   ],
+   "lock": "design.lock.json"
   }
  ]
 }

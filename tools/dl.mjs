@@ -135,7 +135,7 @@ const commands = {
     for (const c of consumers()) {
       let s; try { s = consumerStatus(c); } catch (e) { s = { state: `error: ${e.message}`, files: [] }; }
       if (s.state !== "in sync") drift++;
-      log(`${c.name.padEnd(14)} app ${c.app.padEnd(10)} ${s.state}${s.lockVersion && s.lockVersion !== version() ? `  (last synced at ${s.lockVersion})` : ""}`);
+      log(`${c.name.padEnd(14)} app ${(c.app ?? "core").padEnd(10)} ${s.state}${s.lockVersion && s.lockVersion !== version() ? `  (last synced at ${s.lockVersion})` : ""}`);
       for (const f of s.files) if (f.state !== "in sync") log(`    ${f.out}: ${f.state}`);
     }
     for (const app of listApps()) { const l = load(ROOT, app); if (l.overrides.length) log(`\n${app} overrides universal tokens: ${l.overrides.map((o) => o.name).join(", ")}`); }
