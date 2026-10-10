@@ -18,6 +18,10 @@ This folder is the shared design language for every project under ~/Devel/Claude
 - Do not commit secrets or machine specific paths into tokens. `consumers.json` uses `~/` paths.
 
 
+## Product learnings
+
+Read `docs/product-learnings.md` and `docs/material-language.md` before designing any page or screen. When the owner makes a design decision in any project, add it to `docs/product-learnings.md` in the same session.
+
 ## References
 
 Read `REFERENCES.md` before changing the look. When the owner names a new site, brand or screenshot as inspiration, add it there in the same session.

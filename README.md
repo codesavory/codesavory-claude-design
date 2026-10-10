@@ -44,6 +44,7 @@ Change a ramp, a palette override or a role in `core/` (or an app overlay in `ap
 design-language/
   README.md        this file
   REFERENCES.md    sites and brands the owner pointed at, and what to take from each
+  docs/            material-language.md (silver, leather, studio light) and product-learnings.md (rules agreed while building)
   DESIGN.md        the universal brand book (rules that name tokens)
   CLAUDE.md        instructions for any Claude session that works here or in a project that uses this
   CHANGELOG.md     what changed in each version

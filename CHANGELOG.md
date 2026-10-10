@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 (2026-10-10)
+
+- Product learnings: the design rules agreed while building Kickoff (lists, search, empty states, privacy, previews, diagrams, process)
+
 ## 1.3.0 (2026-10-10)
 
 - Material layer: steel and leather ramps, metal and stitch roles, surface-warm, Instrument Serif, product and edge shadows. Learned from the owner's Instagram feed.

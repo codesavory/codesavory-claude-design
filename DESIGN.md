@@ -101,6 +101,10 @@ Hover shifts a fill one step; press scales to 0.97; disabled is 45% opacity. Foc
 - **Kickoff** (football): the next-match panel with the dot ring and a dot-matrix countdown; followed teams carry the seed; live is the only red. The Mac menu bar icon is the ring itself. See `apps/kickoff/DESIGN.md`.
 - **Other Codesavory apps** keep the tokens and change what the ring measures. Do not add a second accent.
 
+## Product rules
+
+Decisions settled while building products (ticked-first lists, search at the top, no autoplay, no "none listed", self-hosted assets, link previews, diagrams) are in `docs/product-learnings.md`. Read it before designing a new screen or page.
+
 ## Do and don't
 
 - Do give the countdown the biggest type. Don't bury it in equal-weight stats.

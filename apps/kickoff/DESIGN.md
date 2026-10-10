@@ -33,4 +33,6 @@ Kickoff copy is the universal voice with football nouns: "Next match", "Where to
 
 ## Material (1.3.0)
 
-The dotted pitch is drawn as metal studs (`metal-hi/mid/lo`), lit from the top left, fading out toward the edges. Hero devices stand on a studio floor with `shadow-product`. The headline sets "next match" in Instrument Serif italic. Cards have a machined top edge (`shadow-edge`). One saddle stitch (`stitch`) edges the pricing card. Ember remains the only saturated colour. See `docs/material-language.md`.
+The dotted pitch is drawn as metal studs (`metal-hi/mid/lo`), lit from the top left, fading out toward the edges. Hero devices stand on a studio floor with `shadow-product`. The headline sets "next match" in Instrument Serif italic. Cards have a machined top edge (`shadow-edge`). One saddle stitch (`stitch`) edges the next-match panel. Ember remains the only saturated colour. See `docs/material-language.md`.
+
+Product rules agreed with the owner (lists, search, empty states, previews) are in `docs/product-learnings.md`.
