@@ -66,6 +66,10 @@ Decisions the owner and Claude settled while building Kickoff (web, iPhone, Mac,
 24. **Diagrams are minimal.** Boxes and arrows in lanes (clients, services, data, automation). The one accent colour marks the single path that matters (for Kickoff, `claude -p`). A short caption states the security boundary.
 25. **Icons.** The brand mark is the football. SF Symbols on Apple platforms, 24px 1.75 stroke elsewhere.
 
+## Parity
+
+29. **Every feature ships on every surface.** A feature built for one surface (web, iPhone, Mac) is not done until the others have it, or the owner has said it stays out. Check all three before calling a feature finished: web page, iPhone tab, Mac menu section. Share one view or one data model between iPhone and Mac when possible (News is one SwiftUI view used by both) so they cannot drift. When another session builds a feature on one surface, the next session to touch it checks parity and says so.
+
 ## Process
 
 26. **Verify visually in both themes** before calling a design change done: headless Chrome screenshots (light and dark) for the web, simulator screenshots for iPhone, device install for the final check.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.7 (2026-10-10)
+
+- Parity rule: every feature ships on web, iPhone and Mac
+
 ## 1.3.6 (2026-10-10)
 
 - Lasya home: premium minimal (no ticker, ruler, window chrome, pills or promise lines); positioning as a simulation and research studio; Houdini credit in the footer; open questions recorded
