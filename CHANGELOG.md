@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3 (2026-10-10)
+
+- Kickoff marketing pattern applied to Lasya: one screen recipe, ticker, viewer window with frame counter, dark path strip, margin ruler, accent spent once, Doto size floor, true promise line plus privacy page
+
 ## 1.3.2 (2026-10-10)
 
 - Studio and portfolio rules from building Lasya: work centre stage, paths as product cards, compact media stage, no placeholders, muted loop previews, GIF to MP4, naming; Lasya structure updated; owner references added

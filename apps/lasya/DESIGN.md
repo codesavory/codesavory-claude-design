@@ -39,17 +39,20 @@ Media tiles sit on `shadow-1`. No metal, leather or warm bands on Lasya yet: the
 ## Structure
 
 - The header is the wordmark with a "Design studio" label and the light/dark switch. Nothing else: the paths are not repeated in the header.
-- The home page puts the work in the centre (owner, 10 Oct 2026). From the top: a centred label, headline and one line of lead; then the **work stage**; then a foot with the frame counter and an "All work" button; then **Explore**, the four paths as cards; then "About Lasya" (lead plus three columns, as on the Kickoff site); then a one-line footer.
-- The work stage is one large tile (16:9) with two smaller tiles stacked beside it, columns 2 to 1, at most 1040px wide, about 385px tall. It must stay compact: headline, stage and foot fit one screen at 1440 by 900. On a phone the large tile spans and the other two sit side by side.
-- The four paths are Past work, Tools & learn, Lab and Hire me (always last, the call to action). Each is a product card: number, a small tag (Portfolio, Shop, R&D, Services), title, one line, arrow. Four across, two on tablet, one on phone. The Lab is a main path because Lasya is an R&D studio, not only a service.
-- One media tile component (title and technique over the bottom scrim) is used for every piece of work, in the stage and in plain grids. On the two small stage tiles the technique line is hidden.
+- The home page follows the Kickoff marketing pattern (`docs/product-learnings.md`, rule 36) and fits one screen at 1440 by 900. From the top: a **ticker** of the techniques tagged on the work (mono, uppercase, slow); a single line headline with the serif flourish ("Order & chaos, *in motion.*"); one lead line; the **Start a project** button in the accent plus a quiet "See all work" link; the **viewer window**; the **strip**; one assurance line; one mono promise line. Then "About Lasya" below the first screen, then a one line footer with a Privacy link.
+- The viewer window is a window with three dots, the mono title "Lasya viewer" and the **frame counter** at the right of its bar (Doto at 30px, `frame-count`). Inside: one large tile (16:9) with two smaller tiles stacked beside it, columns 2 to 1, about 380px tall at 880px wide. The small tiles hide the technique line. On a phone the large tile spans and the other two sit side by side.
+- The strip is the four paths as dark pills (`surface-inverse`): Past work, Tools & learn, Lab, Hire me (last, the call to action). Each has a title, a mono tag (Portfolio, Shop or Soon, R&D, Services) and one short line. Four across, two on tablet, one on phone. Tags stay neutral. The Lab is a main path because Lasya is an R&D studio, not only a service.
+- The page's world is a **timeline ruler**: frame ticks and numbers in the top and bottom margins, faded at the edges, never behind text.
+- One media tile component (title and technique over the bottom scrim) is used for every piece of work, in the viewer and in plain grids.
 - One page header on every inner page: optional back link, `label`, title, optional lead.
-- Content that is not real yet is hidden. The Tools page shows "Coming soon" until a real product exists.
+- Content that is not real yet is hidden. The Tools page shows "Coming soon" until a real product exists, and the strip tag reads "Soon".
+- A short Privacy page backs the promise line. The promise is only written while the build makes no third party requests.
 
 ## Do not
 
 - Do not use glows, blobs or gradients on surfaces. The only gradient is the media scrim.
 - Do not put the accent on more than one tile at a time.
 - Do not invert renders or tint them with the theme.
-- Do not stack full width tiles on the home page, and do not let the work stage grow past about half the viewport height.
+- Do not stack full width tiles on the home page, and do not let the viewer window push the strip or the promise line below the first screen.
+- Do not draw the timeline ruler behind text, and do not put the accent on the strip tags: the Start a project button is the one spark.
 - Do not publish placeholder products, handles or links.
