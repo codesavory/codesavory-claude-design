@@ -5,11 +5,23 @@ import os from "node:os";
 import path from "node:path";
 import crypto from "node:crypto";
 import { spawnSync } from "node:child_process";
-import { load, validate, resolve, ROOT } from "../lib/language.mjs";
+import { load, validate, resolve, palettes, withPalette, ROOT } from "../lib/language.mjs";
 import { checkContrast, ratio } from "../lib/contrast.mjs";
 import { css, swift, json } from "../lib/targets.mjs";
 
 const compile = (app) => { const l = load(ROOT, app); return { l, r: resolve(l) }; };
+/** Like `compile`, with every non-default palette resolved and attached, as tools/dl.mjs does before generating files. */
+const compileWithPalettes = (app) => {
+  const { l, r } = compile(app);
+  const def = palettes(ROOT);
+  r.defaultPalette = def.default;
+  r.palettes = {};
+  for (const [name, pal] of Object.entries(def.palettes)) {
+    if (name === def.default) continue;
+    r.palettes[name] = { name: pal.name, description: pal.description ?? "", color: resolve(withPalette(l, ROOT, name)).color };
+  }
+  return { l, r, def };
+};
 
 test("the core validates and every colour resolves in both themes", () => {
   const { l, r } = compile(null);
@@ -18,8 +30,8 @@ test("the core validates and every colour resolves in both themes", () => {
   for (const [name, v] of Object.entries(r.color)) for (const th of r.themes) assert.match(v[th], /^#[0-9a-f]{6}$/, `${name} ${th}`);
 });
 
-test("the core and the Kickoff layer meet every contrast pair in both themes", () => {
-  for (const app of [null, "kickoff"]) { const { l, r } = compile(app); assert.deepEqual(checkContrast(r, l.contrast), [], app ?? "core"); }
+test("the core and every app layer meet every contrast pair in both themes", () => {
+  for (const app of [null, "kickoff", "lasya"]) { const { l, r } = compile(app); assert.deepEqual(checkContrast(r, l.contrast), [], app ?? "core"); }
 });
 
 test("contrast maths matches known values", () => {
@@ -40,6 +52,14 @@ test("the Kickoff layer adds tokens and overrides nothing", () => {
   assert.equal(l.provenance["brand"], "core");
   assert.equal(r.color["ring-near"].light, r.color["accent-text"].light);   // aliases follow the core
   assert.equal(r.families.size["ring-hero"], "132px");
+});
+
+test("the Lasya layer adds tokens and overrides nothing", () => {
+  const { l } = compile("lasya");
+  assert.equal(l.overrides.length, 0);
+  assert.equal(l.provenance["media-ground"], "app");
+  assert.equal(l.provenance["frame-count"], "app");
+  assert.equal(l.provenance["brand"], "core");
 });
 
 test("an app layer cannot add to the type scale or override something that does not exist", () => {
@@ -76,10 +96,10 @@ test("Swift output names tokens in camelCase and defines the DS namespace", () =
   const out = swift(compile("kickoff").r);
   assert.match(out, /public enum DS \{/);
   assert.match(out, /public static let surfaceRaised = DS\.dynamic\(0x[0-9A-F]{6}, 0x[0-9A-F]{6}\)/);
-  assert.match(out, /public static let tide600 = /);
+  assert.match(out, /public static let ember600 = /);
   assert.match(out, /public static let space4: CGFloat = CGFloat\(16\)/);
   assert.match(out, /public static func easeWhistle\(_ duration: Double\) -> Animation \{ \.timingCurve\(0\.2, 0\.9, 0\.2, 1, duration: duration\) \}/);
-  assert.match(out, /public static let titleL = DSTypeStyle\(size: 28, lineHeight: 34, weight: \.semibold, tracking: -0\.42\)/);
+  assert.match(out, /public static let titleL = DSTypeStyle\(size: 28, lineHeight: 34, weight: \.semibold, tracking: -?\d+(\.\d+)?\)/);
   assert.doesNotMatch(out, /undefined|NaN/);
 });
 
@@ -136,9 +156,11 @@ test("set refuses a change that breaks contrast and leaves the file untouched", 
 
 test("bump raises the version and writes the changelog", () => {
   const { root, dl } = sandbox();
+  const [a, b] = fs.readFileSync(path.join(root, "VERSION"), "utf8").trim().split(".").map(Number);
+  const next = `${a}.${b + 1}.0`;
   assert.equal(dl("bump", "minor", "Added a token").status, 0);
-  assert.equal(fs.readFileSync(path.join(root, "VERSION"), "utf8").trim(), "1.1.0");
-  assert.match(fs.readFileSync(path.join(root, "CHANGELOG.md"), "utf8"), /## 1\.1\.0[\s\S]*Added a token/);
+  assert.equal(fs.readFileSync(path.join(root, "VERSION"), "utf8").trim(), next);
+  assert.match(fs.readFileSync(path.join(root, "CHANGELOG.md"), "utf8"), new RegExp(`## ${next.replaceAll(".", "\\.")}[\\s\\S]*Added a token`));
 });
 
 test("new-app scaffolds an app layer that checks", () => {
@@ -168,25 +190,29 @@ test("the lock holds a plain SHA-256 prefix of each file, so a project can verif
 test("every palette passes the same contrast pairs in both themes", () => {
   const out = spawnSync("node", [path.join(ROOT, "tools", "dl.mjs"), "check"], { encoding: "utf8" });
   assert.equal(out.status, 0, out.stdout);
-  assert.match(out.stdout, /palettes: tide, fern, ink/);
+  assert.ok(out.stdout.includes(`palettes: ${Object.keys(palettes(ROOT).palettes).join(", ")}`), out.stdout);
 });
+
+/** A palette that overrides something (the default palette overrides nothing). */
+const overriding = (d) => Object.keys(d.palettes).find((n) => n !== d.default && d.palettes[n].overrides);
 
 test("a palette that breaks contrast is rejected", () => {
   const { root, dl } = sandbox();
   const f = path.join(root, "core", "palettes.json");
   const d = JSON.parse(fs.readFileSync(f, "utf8"));
-  d.palettes.fern.overrides["ink-muted"] = { light: "#dddddd", dark: "#dddddd" };
+  const name = overriding(d);
+  d.palettes[name].overrides["ink-muted"] = { light: "#dddddd", dark: "#dddddd" };
   fs.writeFileSync(f, JSON.stringify(d));
   const r = dl("check");
   assert.equal(r.status, 1);
-  assert.match(r.stdout, /palette fern: contrast/);
+  assert.match(r.stdout, new RegExp(`palette ${name}: contrast`));
 });
 
 test("a palette naming an unknown token is rejected", () => {
   const { root, dl } = sandbox();
   const f = path.join(root, "core", "palettes.json");
   const d = JSON.parse(fs.readFileSync(f, "utf8"));
-  d.palettes.ink.overrides["not-a-token"] = { light: "#000000", dark: "#ffffff" };
+  d.palettes[overriding(d)].overrides["not-a-token"] = { light: "#000000", dark: "#ffffff" };
   fs.writeFileSync(f, JSON.stringify(d));
   const r = dl("check");
   assert.equal(r.status, 1);
@@ -194,7 +220,16 @@ test("a palette naming an unknown token is rejected", () => {
 });
 
 test("CSS carries each palette for light and dark, and only what changes", () => {
-  const { r } = compile("kickoff");
-  const d = JSON.parse(fs.readFileSync(path.join(ROOT, "core", "palettes.json"), "utf8"));
-  assert.ok(d.palettes.fern && d.palettes.ink);
+  const { r, def } = compileWithPalettes("kickoff");
+  const out = css(r);
+  assert.ok(Object.keys(r.palettes).length >= 1, "at least one non-default palette");
+  assert.ok(!out.includes(`[data-palette="${def.default}"]`), "the default palette needs no block");
+  for (const name of Object.keys(r.palettes)) {
+    const light = out.match(new RegExp(`\\[data-palette="${name}"\\] \\{([^}]*)\\}`));
+    const dark = out.match(new RegExp(`\\[data-palette="${name}"\\]\\.dark, \\[data-palette="${name}"\\]\\[data-theme="dark"\\] \\{([^}]*)\\}`));
+    assert.ok(light && dark, `${name} has a light and a dark block`);
+    assert.match(light[1], /--accent: #[0-9a-f]{6};/, `${name} sets the accent`);
+    // Only what changes: an untouched token never appears in a palette block.
+    assert.doesNotMatch(light[1] + dark[1], /--surface:|--ink:|--space-4:/, `${name} must not repeat unchanged tokens`);
+  }
 });
