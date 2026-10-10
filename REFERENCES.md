@@ -10,6 +10,7 @@ Everything the owner has pointed at as a design reference, in the order given. A
 - Marketing pages are light by default, with a control at the top to change the accent colour and light or dark.
 - Modern, minimal fonts. Self-hosted only. No Google Fonts, no third-party tracking.
 - "Very, very, very important: high end, premium feel."
+- On Lasya (9 Oct 2026): "Don't have 3 color options on the top! just pick one and commit to it!" Products ship one accent; offer light and dark only, not a palette picker.
 
 ## Sites and brands
 

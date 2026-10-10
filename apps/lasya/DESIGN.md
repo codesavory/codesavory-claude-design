@@ -23,7 +23,8 @@ Kickoff's ring measures time to kickoff. Lasya measures the render itself.
 
 ## Theme and palette
 
-- Light is the default ("light is a page"). A control in the header switches light and dark and the accent palette (ember, signal, graphite). The choice is saved on the device.
+- Light is the default ("light is a page"). A control in the header switches light and dark only. The choice is saved on the device.
+- The accent is ember, fixed. The owner asked to pick one accent and commit to it (9 Oct 2026), so Lasya offers no palette picker and ignores any saved palette.
 - The accent is the same in both themes. In light it appears on the seed, the playhead and accent text only; primary buttons are `brand`.
 
 ## Type
