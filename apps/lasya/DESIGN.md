@@ -32,7 +32,14 @@ Universal scale only. Hero headline `display-m` on desktop (one step down on pho
 
 ## Material
 
-Media tiles sit on `shadow-1`. One editorial band per page (Services on the home page) uses `surface-warm`. No metal or leather on Lasya yet: the renders are the material.
+Media tiles sit on `shadow-1`. No metal, leather or warm bands on Lasya yet: the renders are the material.
+
+## Structure
+
+- Three paths, everywhere: Past work, Tools & learn, Hire me. They are the header nav and the three numbered rows in the home hero. About and Lab live in the footer.
+- The home page is the hero only: headline, three rows, three media tiles and the frame counter.
+- One media tile component (title and technique over the bottom scrim, playhead) is used for every piece of work, in the bento and in plain grids.
+- One page header on every inner page: optional back link, `label`, title, optional lead.
 
 ## Do not
 
