@@ -26,7 +26,7 @@ Lasya must read as a high-end design studio (like XK Studio or Man vs Machine), 
 
 ## Media
 
-- Renders sit on `media-ground` in both themes. Renders are graded on black; the page theme never changes the frame.
+- Frames sit on `surface-sunk`, so the page theme owns every gap. There is never a black border: videos are centred and scaled to fill their frame (home reel, plates), and a project video is shown at its own shape (a square render is a centred square, not a 16:9 box with side bars). Changed 9 Oct 2026 after the owner said the black borders around the video looked wrong; `media-ground`, `media-ink` and `media-ink-muted` are now unused.
 - Captions use `ink` for the title and `ink-subtle` for numbers and technique (`data` face).
 - Content width is `content-wide`; the opening reel is full bleed.
 
