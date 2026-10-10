@@ -60,6 +60,25 @@
     }
    ],
    "lock": "design.lock.json"
+  },
+  {
+   "name": "lasya",
+   "app": "lasya",
+   "path": "~/Devel/ClaudeAgents/cloud-projects/codesavory-mograph",
+   "targets": [
+    {
+     "type": "css",
+     "out": "public/tokens.css",
+     "options": {
+      "fontUrl": "/fonts/"
+     }
+    },
+    {
+     "type": "fonts",
+     "out": "public/fonts"
+    }
+   ],
+   "lock": "design.lock.json"
   }
  ]
 }
