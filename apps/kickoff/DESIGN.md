@@ -30,3 +30,7 @@ Kickoff copy is the universal voice with football nouns: "Next match", "Where to
 - Do not use pitch green or a football icon as brand elements.
 - Do not show scores and countdowns on the same card.
 - Do not add a second accent colour for a competition. Use its crest or the league emblem.
+
+## Material (1.3.0)
+
+The dotted pitch is drawn as metal studs (`metal-hi/mid/lo`), lit from the top left, fading out toward the edges. Hero devices stand on a studio floor with `shadow-product`. The headline sets "next match" in Instrument Serif italic. Cards have a machined top edge (`shadow-edge`). One saddle stitch (`stitch`) edges the pricing card. Ember remains the only saturated colour. See `docs/material-language.md`.

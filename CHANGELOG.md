@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 (2026-10-10)
+
+- Material layer: steel and leather ramps, metal and stitch roles, surface-warm, Instrument Serif, product and edge shadows. Learned from the owner's Instagram feed.
+
+## 1.2.0 (2026-10-10)
+
+- Add the lasya app layer (media ground, playhead, frame counter) and register the Lasya site
+
 ## 1.1.0 (2026-10-07)
 
 - Geist replaces Bricolage Grotesque and Instrument Sans; clearer Tide blue; palettes (Tide, Fern, Ink) with per-palette contrast checks.

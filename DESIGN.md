@@ -47,7 +47,7 @@ Three ramps and a role layer. **Gray** (cool, near-black to white) is the struct
 - The accent is the same in both themes. Dark `accent-text` lightens (ember-300) so it stays readable on near-black.
 - **Palettes** change the accent only: `ember` (default), `signal`, `graphite` (no colour, greys only). Set `data-palette` on the root element. Each palette passes the same contrast pairs in both themes (`dl check`).
 - Text pairs are 4.5:1 or better; control borders, the focus ring and meaningful marks are 3:1 or better. Status never relies on colour alone.
-- No gradients on UI surfaces. The only gradients are the hero light streaks and the soft glows behind the next-match panel. No pure `#000` text; ink is `gray-950`.
+- No gradients on flat UI surfaces or text. Gradients are for material only: a metal edge or disc, the studio floor behind a product (see `docs/material-language.md`). Raycast style light streaks are retired. No pure `#000` text; ink is `gray-950`.
 - Team crests and colours are the only other colours on a football screen, and only on team elements.
 
 ### Type
@@ -66,6 +66,10 @@ One modern, minimal family does the work, plus a dot-matrix face for the moments
 - Large soft radii and full circles: pills for buttons, chips and segmented controls; `radius-xl` for cards and hero panels; round for crests, the ring and the seed. On Apple platforms use continuous corners. Nest radii: inner = outer minus padding.
 - Depth is tonal first (`surface-raised` over `surface`). Shadows are neutral black and soft. In dark, shadows become a hairline top highlight; the only glow is the accent glow behind the primary button and hero.
 - Floating nav is a glass pill: translucent `surface`, 18px blur, hairline border.
+
+### Material
+
+Since 1.3.0 the language has a material layer: brushed silver (`steel-*`, `metal-*`), cognac leather (`leather-*`, `stitch`), bone paper (`surface-warm`), a quiet serif (`serif`) and studio shadows (`shadow-product`, `shadow-edge`). It comes from the owner's reference feed: one machined object on a calm ground, lit from the top left. Rules and recipes are in `docs/material-language.md`. Leather is a material, never a second accent.
 
 ### The ring, the seed and imagery
 

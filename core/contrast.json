@@ -190,6 +190,31 @@
    "fg": "ink-muted",
    "bg": "tint-stone",
    "min": 4.5
+  },
+  {
+   "fg": "ink",
+   "bg": "surface-warm",
+   "min": 4.5
+  },
+  {
+   "fg": "ink-muted",
+   "bg": "surface-warm",
+   "min": 4.5
+  },
+  {
+   "fg": "stitch",
+   "bg": "surface",
+   "min": 3
+  },
+  {
+   "fg": "stitch",
+   "bg": "surface-warm",
+   "min": 3
+  },
+  {
+   "fg": "leather-ink",
+   "bg": "leather",
+   "min": 4.5
   }
  ]
 }
