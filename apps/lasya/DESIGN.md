@@ -30,6 +30,8 @@ Headline at most `display-l` (56px), the one-line description directly under it,
 
 ## Media
 
+- No software watermarks or viewport chrome on media. The owner asked for the Houdini logo and "Non-Commercial Edition" marks to be cropped out of the portfolio renders (10 Oct 2026) so the work reads as professional; renders are cropped at the bottom edge, and full-window UI screenshots are not used. Cropping does not change which licence the work was made under: check it with SideFX before selling tools or taking paid work.
+
 - Frames sit on `surface-sunk`, so the page theme owns every gap. There is never a black border: videos are centred and scaled to fill their frame (home reel, plates), and a project video is shown at its own shape (a square render is a centred square, not a 16:9 box with side bars). Changed 9 Oct 2026 after the owner said the black borders around the video looked wrong; `media-ground`, `media-ink` and `media-ink-muted` are now unused.
 - Captions use `ink` for the title and `ink-subtle` for numbers and technique (`data` face).
 - Content width is `content-wide`; the opening reel uses the same width, so everything shares one left edge.
