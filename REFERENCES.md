@@ -16,6 +16,8 @@ Everything the owner has pointed at as a design reference, in the order given. A
 - On naming (9 Oct 2026): questioned a food analogy ("why are we thinking about a food analogy?"), liked "order and chaos" as the idea, and chose **Lasya** over Laya, Avarta, SimGraph and Code vs Clay. Sanskrit and Japanese words for order and chaos were the preferred source.
 - Product direction (10 Oct 2026): a video the owner named as "what I want to build", an ecosystem where distribution channels feed services, products and apps, talent, games and a physical network, with cash flow funding the content. https://www.youtube.com/watch?v=Cj4TXpb6zzk. Notes and the mapping to Codesavory are in the codesavory-mograph repo, `inspiration/ecosystem-flywheel.md`.
 
+- On Lasya's second pass (10 Oct 2026): "This looks like an exact copy of Kickoff. I said it should have its own DNA. A score app with subscription and a website that sells servicing and digital tools aren't the same!" Share the language, not the layout.
+
 ## Sites and brands
 
 | Reference | URL | What to take from it |
@@ -32,7 +34,7 @@ Everything the owner has pointed at as a design reference, in the order given. A
 | Airbnb, Stripe | https://www.airbnb.com, https://stripe.com | Depth of a real design system: tokens, components, expression. |
 | Instagram "For You" product grid (3 screenshots, 10 Oct 2026) | (screenshots, owner's phone: IMG_6750 to IMG_6752) | The owner's taste in one feed: tactile product photography. See "Material direction" below. |
 | XK (London motion studio) and other mograph studios | https://www.stashmedia.tv/?p=67604 (launch article; the studio's own site was not checked) | The owner's opening brief for Lasya: "like XK studios and other mograph studios". Short non-literal name, the work leads, little chrome. London peers read for naming (ManvsMachine, Territory Studio, Golden Wolf, THE LINE) were Claude's research, not owner picks. |
-| Kickoff marketing site (kickoff.codesavory.dev) | https://kickoff.codesavory.dev (source: `site/` in the Football-Tracking-Streaming repo) | The owner's own marketing pattern, named as the model for Lasya (10 Oct 2026): "use design pattern learnings from the Kickoff marketing website and make it more in tune with that while maintaining the page DNA." Take the one-screen recipe (ticker, one line headline, one button, one product window with a live readout, one strip, assurance and promise lines, a quiet world drawn behind). Leave its domain content (pitch, crests, ring) to Kickoff. |
+| Kickoff marketing site (kickoff.codesavory.dev) | https://kickoff.codesavory.dev (source: `site/` in the Football-Tracking-Streaming repo) | Take the principles only: calm hierarchy, one accent, quiet world behind the content, plain honest copy. Do NOT take its page. It sells a subscription app; Lasya sells services and digital tools. A version that copied its recipe was rejected (10 Oct 2026). |
 | Houdini colour ramps | (screenshots, owner's machine) | Owner likes ramps with a bold flavour. Superseded by the monochrome plus ember direction. |
 
 ## Where each shows up

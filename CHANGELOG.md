@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.4 (2026-10-10)
+
+- Lasya has its own DNA: a studio and shop page (reel with viewfinder marks and timecode, shot list, services, tools shelf, hire), not Kickoff's app pitch. Rules 36 to 40 replaced; Lasya structure, signature and references updated
+
 ## 1.3.3 (2026-10-10)
 
 - Kickoff marketing pattern applied to Lasya: one screen recipe, ticker, viewer window with frame counter, dark path strip, margin ruler, accent spent once, Doto size floor, true promise line plus privacy page
