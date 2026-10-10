@@ -4,7 +4,7 @@ App-specific language for Lasya (lasya.codesavory.dev), the motion and simulatio
 
 ## What the product is
 
-A portfolio and shop for Houdini work: simulations, studies, tools and a lab. The work is the content, so the page is a quiet frame around moving renders.
+A portfolio and shop for Houdini work: simulations, studies, tools and a lab. The work is the content, so the page is a quiet frame around moving renders. Positioning (owner, 10 Oct 2026): a studio grounded in simulation and research, making motion graphics art from those principles.
 
 ## Direction: a studio, not a product
 
@@ -15,7 +15,7 @@ Lasya must read as a high-end design studio (like XK Studio or Man vs Machine), 
 - **Almost no chrome.** No window frames, traffic-light dots, ticker, ruler, pill strips, badges, promise lines or progress bars. Panels and the video box are square-ish too.
 - **Few words.** One headline, one line under it, one statement in Info. Copy states facts.
 - **Info, not marketing.** The home ends with an Info block (Studio, Services, Contact), then one large closing line ("Start a project"), then a one-line footer. The accent is spent on the seed in the wordmark and the serif flourish.
-- **Navigation lives once**, in the header: Past work, Tools & learn, Lab, Hire me (a "Menu" on phones). It is not repeated as cards or strips on the page.
+- **Navigation lives once**, in the header: Past work, Tools, Lab, Hire me (a "Menu" on phones). It is not repeated as cards or strips on the page.
 
 ## DNA that stays
 
@@ -27,6 +27,18 @@ Lasya must read as a high-end design studio (like XK Studio or Man vs Machine), 
 ## Home proportions
 
 Headline at most `display-l` (56px), the one-line description directly under it, then the reel. No headline above `display-l`; on a laptop the first screen is the headline, the line and the top of the reel (owner, 9 Oct 2026: the earlier 84px headline with a stranded description looked terrible).
+
+## Home as built (10 Oct 2026)
+
+The owner, on the live home that borrowed Kickoff's page: "This looks too much like Kickoff. Keep the DNA, make it more minimal and upscale and premium. Remove the top running bars and the no ads lines. This is not a mobile app!"
+
+- **Built:** a centred one line headline with the serif flourish, one description ("A studio grounded in simulation and research. Motion graphics art, built on those principles."), the Start a project button (the one accent), the work (one large tile with two beside it, 1000px wide, a title caption on each and the frame counter in the lead tile's caption), four quiet paths as hairline-topped text links, About, then the footer.
+- **Removed, again:** the ticker, the timeline ruler, the viewer window (dots, title, frame bar), the dark pill strip and its badges, and the assurance and promise lines.
+- **Open question for the owner:** the home still differs from the rules above in three ways. Captions sit over a scrim and tiles have rounded corners (rules say gallery labels beneath and sharp corners), and the four paths appear on the home with the header nav hidden there (rules say navigation lives once, in the header).
+
+## Credit
+
+Every page's footer thanks the software: "Special thanks to SideFX and Houdini, the software this work is made with. Houdini is a trademark of Side Effects Software Inc. Lasya is not affiliated with SideFX." (Owner, 10 Oct 2026: so that it is legal, and also an appreciation for the tool.)
 
 ## Media
 

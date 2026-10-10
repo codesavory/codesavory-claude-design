@@ -20,6 +20,8 @@ Everything the owner has pointed at as a design reference, in the order given. A
 
 - On Lasya's third pass (10 Oct 2026): "It's too verbose... I told you not to use my Mardini stuff, it's too amateur!" Cut the copy to the minimum and show no Mardini pieces.
 
+- On the Kickoff style home going live (10 Oct 2026): "This looks too much like Kickoff; keep the DNA, make it more minimal and upscale and premium. Remove the top running bars and the no ads lines. This is not a mobile app!" Also: position Lasya as a studio grounded in simulation and research, and thank Houdini in the footer.
+
 ## Sites and brands
 
 | Reference | URL | What to take from it |

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.6 (2026-10-10)
+
+- Lasya home: premium minimal (no ticker, ruler, window chrome, pills or promise lines); positioning as a simulation and research studio; Houdini credit in the footer; open questions recorded
+
 ## 1.3.5 (2026-10-10)
 
 - Lasya: show only work that clears the bar (no Mardini series) and keep copy terse; Lasya structure, work and copy sections updated; owner feedback recorded

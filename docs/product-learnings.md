@@ -1,6 +1,6 @@
 # Product learnings
 
-Decisions the owner and Claude settled while building Kickoff (web, iPhone, Mac, marketing site) and Lasya (studio site), written as rules so every other page and product follows the same consensus. Each rule says why. Added in 1.3.1, extended in 1.3.2 with the studio and portfolio rules in 1.3.4 with the studio and shop rules and in 1.3.5 with the bar and brevity rules. When a new decision is made in any project, add it here in the same session.
+Decisions the owner and Claude settled while building Kickoff (web, iPhone, Mac, marketing site) and Lasya (studio site), written as rules so every other page and product follows the same consensus. Each rule says why. Added in 1.3.1, extended in 1.3.2 with the studio and portfolio rules in 1.3.4 with the studio and shop rules in 1.3.5 with the bar and brevity rules and in 1.3.6 with the premium minimal rule. When a new decision is made in any project, add it here in the same session.
 
 ## Look and feel
 
@@ -51,6 +51,8 @@ Decisions the owner and Claude settled while building Kickoff (web, iPhone, Mac,
 
 41. **Show only work that clears the bar.** Lasya does not show the Mardini challenge series: the owner judged it too amateur for a studio site (10 Oct 2026, repeated after it was shown anyway). The Houdini studies carry the portfolio until stronger client or showcase work exists. Fewer pieces beat a mixed standard. Before adding any work to a portfolio, ask the owner whether it meets the bar; do not port everything that exists.
 42. **Marketing copy is terse.** One short line per block, or nothing. Services are plain titles with no descriptions. A tools or lab block is a title and a button. The About is two short lines. No intro paragraphs, no feature lists, no promises nobody asked for. (Owner, 10 Oct 2026: "It's too verbose.") When in doubt, cut the sentence and keep the headline.
+
+43. **Premium means fewer parts.** When a studio page borrows from an app page, remove the app parts first: running tickers and rulers, window chrome, badges and "Soon" pills, and privacy slogans. What is left (a headline, the work, a few quiet links) is what reads as upscale. (Owner, 10 Oct 2026: "This looks too much like Kickoff. Keep the DNA, make it more minimal and upscale and premium. This is not a mobile app!")
 
 ## Privacy as design
 
