@@ -6,19 +6,19 @@ App-specific language for Lasya (lasya.codesavory.dev), the motion and simulatio
 
 A portfolio and shop for Houdini work: simulations, studies, tools and a lab. The work is the content, so the page is a quiet frame around moving renders.
 
-## Signature: the playhead and the frame counter
+## Signature: the frame counter
 
 Kickoff's ring measures time to kickoff. Lasya measures the render itself.
 
-- **The playhead.** Every playing media tile carries a `playhead-weight` line along its bottom edge that fills with the loop. It is `media-ink` at rest and `playhead` (the accent) on the tile you point at or focus. One accent playhead per screen.
 - **The frame counter.** The hero shows the current frame of its lead loop in Doto (`dot` face), coloured `frame-count`, with a `label` caption ("Frame"). It ticks with the video and stops under `prefers-reduced-motion`.
-- **The seed.** A `seed-dot` accent dot before the LASYA wordmark. It is the only accent in the header.
+- **The seed.** A `seed-dot` accent dot (the `playhead` colour) before the LASYA wordmark. It is the only accent in the header.
+- **No progress bars on media.** The owner removed the playhead line under tiles (9 Oct 2026). Tiles show the render, the title and the technique, nothing else.
 
 ## Media
 
 - Tiles sit on `media-ground` in both themes. Renders are graded on black; the page theme never changes the frame.
 - Titles over media use `media-ink`, techniques `media-ink-muted` in the data face, on a bottom scrim made from `media-ground`.
-- Corners are `radius-md`. No borders, no tilt on hover; hover lifts the video scale by 2% and lights the playhead.
+- Corners are `radius-md`. No borders, no tilt on hover; hover lifts the video scale by 2%.
 - Content width is `content-wide`.
 
 ## Theme and palette
@@ -37,9 +37,10 @@ Media tiles sit on `shadow-1`. No metal, leather or warm bands on Lasya yet: the
 
 ## Structure
 
-- Four paths, everywhere: Past work, Tools & learn, Lab, Hire me (always last, it is the call to action). They are the header nav and the numbered rows in the home hero. The Lab is a main path because Lasya is an R&D studio, not only a service. About lives in the footer.
-- The home page is the hero only: headline, four rows, three media tiles and the frame counter.
-- One media tile component (title and technique over the bottom scrim, playhead) is used for every piece of work, in the bento and in plain grids.
+- The header is the wordmark with a "Design studio" label and the light/dark switch. Nothing else: the paths are not repeated in the header.
+- Four paths: Past work, Tools & learn, Lab, Hire me (always last, the call to action). They are the numbered rows in the home hero. The Lab is a main path because Lasya is an R&D studio, not only a service.
+- The home page is the hero (headline, four rows, three media tiles, frame counter), then an "About Lasya" section below the first screen (lead plus three columns, as on the Kickoff site), then a one-line footer.
+- One media tile component (title and technique over the bottom scrim) is used for every piece of work, in the bento and in plain grids.
 - One page header on every inner page: optional back link, `label`, title, optional lead.
 
 ## Do not
