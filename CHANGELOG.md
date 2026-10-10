@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 (2026-10-10)
+
+- Product learnings: marketing site (look and motion, launch honesty, Google review pages, shipping details, open items)
+
 ## 1.3.1 (2026-10-10)
 
 - Product learnings: the design rules agreed while building Kickoff (lists, search, empty states, privacy, previews, diagrams, process)
