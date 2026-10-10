@@ -6,22 +6,29 @@ App-specific language for Lasya (lasya.codesavory.dev), the motion and simulatio
 
 A portfolio and shop for Houdini work: simulations, studies, tools and a lab. The work is the content, so the page is a quiet frame around moving renders.
 
-## Signature: the camera and the timeline
+## Direction: a studio, not a product
 
-Kickoff's ring measures time to kickoff. Lasya looks at the render the way a camera and an editor do.
+Lasya must read as a high-end design studio (like XK Studio or Man vs Machine), with the Codesavory DNA kept quiet. The owner's word (9 Oct 2026): the app-style home "looks too much like a digital product".
 
-- **Viewfinder marks and timecode.** The lead reel on the home page has four corner marks in `media-ink` and a running timecode (`MM:SS:FF` at 30 fps, mono) in its lower right corner. It ticks with the video and stops under `prefers-reduced-motion`.
-- **Frame numbered sections.** Section markers on the home page read 0000, 0240, 0480 and 0720, as frames at 24 fps.
-- **The seed.** A `seed-dot` accent dot (the `playhead` colour) before the LASYA wordmark. It is the only accent in the header.
-- **No progress bars on media.** The owner removed the playhead line under tiles (9 Oct 2026). Tiles show the render, the title and the technique, nothing else.
+- **The work is the page.** One edge-to-edge reel opens the home. Everything else is the work at large size on the media ground, with sharp corners (`radius-xs`).
+- **Gallery labels, not overlays.** A render has its number, title and technique set beneath it, like a label on a wall. No scrim, no arrows, no overlaid text.
+- **Almost no chrome.** No window frames, traffic-light dots, ticker, ruler, pill strips, badges, promise lines or progress bars. Panels and the video box are square-ish too.
+- **Few words.** One headline, one line under it, one statement in Info. Copy states facts.
+- **Info, not marketing.** The home ends with an Info block (Studio, Services, Contact), then one large closing line ("Start a project"), then a one-line footer. The accent is spent on the seed in the wordmark and the serif flourish.
+- **Navigation lives once**, in the header: Past work, Tools & learn, Lab, Hire me (a "Menu" on phones). It is not repeated as cards or strips on the page.
+
+## DNA that stays
+
+- The seed dot before the LASYA wordmark, and the "Design studio" label beside it.
+- The serif flourish: one italic phrase per screen in `serif` and `accent-text` ("*in motion.*").
+- The dot-matrix frame counter (Doto, `frame-count`), small, in the opening reel's label.
+- Geist and Geist Mono, mono captions, hairlines, light and dark.
 
 ## Media
 
-- Tiles sit on `media-ground` in both themes. Renders are graded on black; the page theme never changes the frame.
-- Previews are muted loops that play only while on screen. A full video starts on a tap and has controls (see `docs/product-learnings.md`, rules 33 and 34).
-- Titles over media use `media-ink`, techniques `media-ink-muted` in the data face, on a bottom scrim made from `media-ground`.
-- Corners are `radius-md`. No borders, no tilt on hover; hover lifts the video scale by 2%.
-- Content width is `content-wide`.
+- Renders sit on `media-ground` in both themes. Renders are graded on black; the page theme never changes the frame.
+- Captions use `ink` for the title and `ink-subtle` for numbers and technique (`data` face).
+- Content width is `content-wide`; the opening reel is full bleed.
 
 ## Theme and palette
 
@@ -37,37 +44,12 @@ Universal scale only. Hero headline `display-m` on desktop (one step down on pho
 
 Media tiles sit on `shadow-1`. No metal, leather or warm bands on Lasya yet: the renders are the material.
 
-## Structure
-
-Lasya is a studio that hires out its skills and a shop that sells digital tools. Its home page is built for that, not as an app pitch (`docs/product-learnings.md`, rules 36 and 37). The owner rejected a version that copied Kickoff's marketing page.
-
-- The header is the wordmark with a "Design studio" label and the light/dark switch. Nothing else: the paths are not repeated in the header.
-- The home page, top to bottom:
-  1. **Opening shot.** A left aligned headline ("Order & chaos, *in motion.*", serif flourish) beside one short line ("Houdini motion design studio.") and an availability line, then the **reel**: the lead piece as a wide 21:9 loop with viewfinder marks, title, technique and the running timecode.
-  2. **Selected work (0000).** A numbered shot list of the first eight pieces (today five Houdini studies): number, title, technique, year. On desktop, hovering or focusing a row plays its loop in a sticky viewer beside the list. On a phone each row shows a thumbnail instead.
-  3. **What I make (0240).** The four services as plain titles in large type, no descriptions.
-  4. **Tools & Lab (0480).** The tools shelf (a dashed "Coming soon" panel with one button until a real product exists, then product cards) beside a one line note on the Lab.
-  5. **Hire (0720).** "Let's make *something*.", the Start a project button (the one accent on the page) and the email address.
-  6. **About**, two short lines (who, and what Lāsya means), then a one line footer with a Privacy link.
-- The paths are Past work, Tools & learn, Lab and Hire me (always last, the call to action). The Lab is a main path because Lasya is an R&D studio, not only a service.
-- One media tile component (title and technique over the bottom scrim) is used for every piece of work in plain grids.
-- One page header on every inner page: optional back link, `label`, title, optional lead.
-- Content that is not real yet is hidden. The Tools page shows "Coming soon" until a real product exists.
-
-## Work shown
-
-Only the Houdini studies. The Mardini challenge series is not shown anywhere on the site: the owner judged it too amateur (10 Oct 2026). Do not restore it, and do not port pieces from other sites without asking (`docs/product-learnings.md`, rule 41).
-
-## Copy
-
-Terse (rule 42). One line per block. Services are titles only. The Tools, Lab and Contact pages are a heading, a button and a form, with no explaining paragraphs. The Privacy page is five short lines.
-
 ## Do not
 
-- Do not use glows, blobs or gradients on surfaces. The only gradient is the media scrim.
-- Do not put the accent on more than one thing at a time. On the home page it is the Start a project button.
+- Do not use glows, blobs or gradients on surfaces, and do not overlay text on renders.
+- Do not put the accent on more than one thing at a time. On the home page it is the serif flourish in the headline (and the seed in the wordmark).
 - Do not invert renders or tint them with the theme.
-- Do not stack full width tiles for the work, and do not frame the work in app window chrome.
+- Do not frame the work in app window chrome. Large and full-bleed work is wanted (9 Oct 2026, replacing the earlier "no full width tiles" rule): the work is the page.
 - Do not borrow Kickoff's page: no ticker, no download pills, no "no ads, no tracking" slogan on the home page, no centred product pitch.
 - Do not publish placeholder products, handles or links.
 - Do not show the Mardini series, and do not write paragraphs where a line will do.
