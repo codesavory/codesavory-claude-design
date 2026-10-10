@@ -37,8 +37,8 @@ Media tiles sit on `shadow-1`. No metal, leather or warm bands on Lasya yet: the
 
 ## Structure
 
-- Three paths, everywhere: Past work, Tools & learn, Hire me. They are the header nav and the three numbered rows in the home hero. About and Lab live in the footer.
-- The home page is the hero only: headline, three rows, three media tiles and the frame counter.
+- Four paths, everywhere: Past work, Tools & learn, Lab, Hire me (always last, it is the call to action). They are the header nav and the numbered rows in the home hero. The Lab is a main path because Lasya is an R&D studio, not only a service. About lives in the footer.
+- The home page is the hero only: headline, four rows, three media tiles and the frame counter.
 - One media tile component (title and technique over the bottom scrim, playhead) is used for every piece of work, in the bento and in plain grids.
 - One page header on every inner page: optional back link, `label`, title, optional lead.
 
