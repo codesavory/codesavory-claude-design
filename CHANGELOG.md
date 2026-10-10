@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 (2026-10-10)
+
+- Studio and portfolio rules from building Lasya: work centre stage, paths as product cards, compact media stage, no placeholders, muted loop previews, GIF to MP4, naming; Lasya structure updated; owner references added
+
 ## 1.3.1 (2026-10-10)
 
 - Product learnings: the design rules agreed while building Kickoff (lists, search, empty states, privacy, previews, diagrams, process)

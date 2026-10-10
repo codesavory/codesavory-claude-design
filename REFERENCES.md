@@ -12,6 +12,10 @@ Everything the owner has pointed at as a design reference, in the order given. A
 - "Very, very, very important: high end, premium feel."
 - On Lasya (9 Oct 2026): "Don't have 3 color options on the top! just pick one and commit to it!" Products ship one accent; offer light and dark only, not a palette picker.
 
+- On Lasya's home page (10 Oct 2026): "I want the work to be in the center of the page and move the 4 things to under it, something similar to Kickoff's products." Then, on seeing it: "It's taking up a lot of place!" The work is central but compact.
+- On naming (9 Oct 2026): questioned a food analogy ("why are we thinking about a food analogy?"), liked "order and chaos" as the idea, and chose **Lasya** over Laya, Avarta, SimGraph and Code vs Clay. Sanskrit and Japanese words for order and chaos were the preferred source.
+- Product direction (10 Oct 2026): a video the owner named as "what I want to build", an ecosystem where distribution channels feed services, products and apps, talent, games and a physical network, with cash flow funding the content. https://www.youtube.com/watch?v=Cj4TXpb6zzk. Notes and the mapping to Codesavory are in the codesavory-mograph repo, `inspiration/ecosystem-flywheel.md`.
+
 ## Sites and brands
 
 | Reference | URL | What to take from it |
@@ -27,6 +31,7 @@ Everything the owner has pointed at as a design reference, in the order given. A
 | Raycast | https://www.raycast.com/ | Dark theme target: near-black, floating glass nav pill with hairline border, huge centred white headline, diagonal grainy red light-streak art, glowing light pill button, small mono captions. The hero screenshot supplied by the owner was the first benchmark. Later feedback (7 Oct 2026): the marketing site looked "too copied from Raycast". Take the near-black surfaces and the quiet hairlines, not the floating glass nav pill, the diagonal light streaks or the glow button. Kickoff's own signature is the dotted pitch and the dot ring. |
 | Airbnb, Stripe | https://www.airbnb.com, https://stripe.com | Depth of a real design system: tokens, components, expression. |
 | Instagram "For You" product grid (3 screenshots, 10 Oct 2026) | (screenshots, owner's phone: IMG_6750 to IMG_6752) | The owner's taste in one feed: tactile product photography. See "Material direction" below. |
+| XK (London motion studio) and other mograph studios | https://www.stashmedia.tv/?p=67604 (launch article; the studio's own site was not checked) | The owner's opening brief for Lasya: "like XK studios and other mograph studios". Short non-literal name, the work leads, little chrome. London peers read for naming (ManvsMachine, Territory Studio, Golden Wolf, THE LINE) were Claude's research, not owner picks. |
 | Houdini colour ramps | (screenshots, owner's machine) | Owner likes ramps with a bold flavour. Superseded by the monochrome plus ember direction. |
 
 ## Where each shows up
