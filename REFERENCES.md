@@ -18,6 +18,8 @@ Everything the owner has pointed at as a design reference, in the order given. A
 
 - On Lasya's second pass (10 Oct 2026): "This looks like an exact copy of Kickoff. I said it should have its own DNA. A score app with subscription and a website that sells servicing and digital tools aren't the same!" Share the language, not the layout.
 
+- On Lasya's third pass (10 Oct 2026): "It's too verbose... I told you not to use my Mardini stuff, it's too amateur!" Cut the copy to the minimum and show no Mardini pieces.
+
 ## Sites and brands
 
 | Reference | URL | What to take from it |

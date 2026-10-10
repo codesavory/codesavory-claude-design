@@ -43,16 +43,24 @@ Lasya is a studio that hires out its skills and a shop that sells digital tools.
 
 - The header is the wordmark with a "Design studio" label and the light/dark switch. Nothing else: the paths are not repeated in the header.
 - The home page, top to bottom:
-  1. **Opening shot.** A left aligned headline ("Order & chaos, *in motion.*", serif flourish) beside one short intro and an availability line, then the **reel**: the lead piece as a wide 21:9 loop with viewfinder marks, title, technique and the running timecode.
-  2. **Selected work (0000).** A numbered shot list of the first eight pieces: number, title, technique, year. On desktop, hovering or focusing a row plays its loop in a sticky viewer beside the list. On a phone each row shows a thumbnail instead.
-  3. **What I make (0240).** The services stated plainly, as a numbered list.
-  4. **Tools & Lab (0480).** The tools shelf (a dashed "in the works" panel until a real product exists, then product cards) beside a note on the Lab.
-  5. **Hire (0720).** A large closing line with the Start a project button, the one accent on the page, and the email address.
-  6. **About Lasya**, then a one line footer with a Privacy link.
+  1. **Opening shot.** A left aligned headline ("Order & chaos, *in motion.*", serif flourish) beside one short line ("Houdini motion design studio.") and an availability line, then the **reel**: the lead piece as a wide 21:9 loop with viewfinder marks, title, technique and the running timecode.
+  2. **Selected work (0000).** A numbered shot list of the first eight pieces (today five Houdini studies): number, title, technique, year. On desktop, hovering or focusing a row plays its loop in a sticky viewer beside the list. On a phone each row shows a thumbnail instead.
+  3. **What I make (0240).** The four services as plain titles in large type, no descriptions.
+  4. **Tools & Lab (0480).** The tools shelf (a dashed "Coming soon" panel with one button until a real product exists, then product cards) beside a one line note on the Lab.
+  5. **Hire (0720).** "Let's make *something*.", the Start a project button (the one accent on the page) and the email address.
+  6. **About**, two short lines (who, and what Lāsya means), then a one line footer with a Privacy link.
 - The paths are Past work, Tools & learn, Lab and Hire me (always last, the call to action). The Lab is a main path because Lasya is an R&D studio, not only a service.
 - One media tile component (title and technique over the bottom scrim) is used for every piece of work in plain grids.
 - One page header on every inner page: optional back link, `label`, title, optional lead.
 - Content that is not real yet is hidden. The Tools page shows "Coming soon" until a real product exists.
+
+## Work shown
+
+Only the Houdini studies. The Mardini challenge series is not shown anywhere on the site: the owner judged it too amateur (10 Oct 2026). Do not restore it, and do not port pieces from other sites without asking (`docs/product-learnings.md`, rule 41).
+
+## Copy
+
+Terse (rule 42). One line per block. Services are titles only. The Tools, Lab and Contact pages are a heading, a button and a form, with no explaining paragraphs. The Privacy page is five short lines.
 
 ## Do not
 
@@ -62,3 +70,4 @@ Lasya is a studio that hires out its skills and a shop that sells digital tools.
 - Do not stack full width tiles for the work, and do not frame the work in app window chrome.
 - Do not borrow Kickoff's page: no ticker, no download pills, no "no ads, no tracking" slogan on the home page, no centred product pitch.
 - Do not publish placeholder products, handles or links.
+- Do not show the Mardini series, and do not write paragraphs where a line will do.

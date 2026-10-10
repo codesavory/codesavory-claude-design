@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.5 (2026-10-10)
+
+- Lasya: show only work that clears the bar (no Mardini series) and keep copy terse; Lasya structure, work and copy sections updated; owner feedback recorded
+
 ## 1.3.4 (2026-10-10)
 
 - Lasya has its own DNA: a studio and shop page (reel with viewfinder marks and timecode, shot list, services, tools shelf, hire), not Kickoff's app pitch. Rules 36 to 40 replaced; Lasya structure, signature and references updated
